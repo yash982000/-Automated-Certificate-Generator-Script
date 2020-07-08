@@ -18,5 +18,5 @@ The input file must contain a comma seperated list of the ranks, their user hand
 
 eg. Rank  User_handle Name  
     1     yash982000  Yash Patel  
-    2     hannahaws   Hannah
+    2     hannahAWS   Hannah
     
