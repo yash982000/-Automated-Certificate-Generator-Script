@@ -1,4 +1,5 @@
-# Script Author: Kushan Mehta
+# Author: Yash Patel
+  
 import cv2
 import pandas as pd
 
