@@ -1,29 +1,36 @@
 # Author: Yash Patel
-  
-import cv2
+ 
 import pandas as pd
+import cv2
+import numpy as np
 
 #Modify the below variables according to your preferences
 
 # Enter valid paths from your own file system
 
-# The input file contains names as a comma seperated list of format (Rank, User handle, Name)
+# The input file contains names as a comma seperated list of format 
+# (Rank, User handle, Name)
+  
 participants = pd.read_csv("ranklist.csv")
 
-template_file_path = "CERTI_TEMPLATE.png"
+template_file_path = "CERTIFICATE_TEMPLATE.png"
 
 # Make sure this output directory already exists or else certificates won't actually be generated
 output_directory_path = "generated_certificates"
 
-font_size = 3.8
+font_size = 4.0  
 font_color = (51,51,51)
 
-# Test with different values for your particular Template
 # This variables determine the exact position where your text will overlay on the template
+# Test with different values for your particular Template as and when you need it as per the size, texture and format.  
+  
 # Y adjustment determines the px to position above the horizontal center of the template (may be positive or negative)
-coordinate_y_adjustment = 280
+  
+coordinate_y_adjustment = 285
+  
 # X adjustment determiens the px to position to the right of verticial center of the template (may be positive or negative)
-coordinate_x_adjustment = 7
+  
+coordinate_x_adjustment = 8
 
 disqualified = {"user_handle_of_disqualified"}
 
@@ -35,7 +42,7 @@ for index, row in participants.iterrows():
         continue
 
     print(row["User handle"])
-
+  
     certiName = row["Name"].title()
 
     img = cv2.imread(template_file_path)
