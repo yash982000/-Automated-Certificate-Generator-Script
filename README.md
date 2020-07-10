@@ -12,7 +12,7 @@ This python script automates the process of generating multiple certificates for
   
 Simply edit the input and output file path for the csv input file and template image and the generated certificates file and run it.
 
-Format of input csv file:
+Format of input csv file:   
   
 The input file must contain a comma seperated list of the ranks, their user handles and the names of people you want to provide certificate to.
 
